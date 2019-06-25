@@ -1,0 +1,74 @@
+@import "./shared/colors";
+@import "./shared/mixins";
+
+// PAGES
+@import "./index";
+@import "./portfolios";
+@import "./blogs";
+@import "./about";
+@import "./cv";
+
+// Components
+@import "./header";
+@import "./slate-editor";
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Montserrat", "Helvetica";
+  background-image: url(/static/images/beige-tiles-opacity40.png);
+}
+
+.layout-container {
+  padding: 1rem;
+}
+
+@media (max-width: 991px) {
+  body {
+    padding: 0.5rem;
+  }
+}
+
+.self-typed {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: grey;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  font-weight: 600;
+}
+
+// --------- BASE PAGE -------------
+
+.base-page {
+  padding: 150px 0 100px 0;
+  color: black;
+  min-height: 100vh;
+
+  .page-header {
+    .page-header-title {
+      font-weight: 700;
+      color: black;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+// --------- DEFAULT HEADER -------------
+.port-navbar.port-nav-base.port-nav-default {
+  // padding: 30px;
+  // background-color: $secondary !important;
+}

@@ -1,0 +1,150 @@
+// HEADER
+.port-navbar.port-nav-base {
+  width: 98.65%;
+  z-index: 15;
+  // padding: 40px;
+
+  .port-navbar {
+    &-brand {
+      color: black;
+      font-size: 24px;
+      // text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: bold;
+    }
+
+    &-item {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    &-link {
+      color: black;
+      font-weight: bold;
+      letter-spacing: 0.8px;
+      font-size: 18px;
+      text-transform: uppercase;
+
+      &.active {
+        color: #dba919;
+      }
+
+      &:hover,
+      &:focus {
+        color: #dba919;
+      }
+    }
+  }
+  .dropdown-menu {
+    background-color: #22222296;
+
+    &.active {
+      color: #dba919;
+    }
+  }
+  .port-dropdown-toggle {
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.bg-transparent.menu-open {
+  background-color: #d1e0dee3 !important;
+}
+
+.bg-transparent.menu-closed {
+  transition: 3s;
+}
+
+.header-logo {
+  position: relative;
+  margin-top: 1em;
+  height: 13vh;
+  display: inline-block;
+  text-align: right;
+  top: 7vh;
+  width: 100%;
+
+  > img {
+    height: 7em;
+    // margin-right: 3.5em;
+    max-width: 100%;
+  }
+}
+
+.strapline {
+  width: 90%;
+  margin-left: 50%;
+  position: absolute;
+  top: 5.6em;
+  right: 0.25em;
+}
+
+.strapline-text {
+  font-size: small;
+}
+
+@media (max-width: 991px) {
+  .header-logo {
+    position: relative;
+    margin-top: 1em;
+    height: 13vh;
+    display: inline-block;
+    text-align: right;
+    top: 11vh;
+    width: 100%;
+
+    > img {
+      max-width: 96vw;
+      margin-right: 0;
+      height: auto;
+    }
+  }
+  .strapline {
+    width: 100%;
+    position: absolute;
+    font-size: smaller;
+    text-align: center;
+    margin-top: 0.5em;
+    top: auto;
+    right: 0;
+  }
+
+  .hero-welcome-bio {
+    margin-bottom: 20px;
+  }
+}
+
+.header-text1 {
+}
+
+.header-text2 {
+}
+
+.port-navbar.port-nav-base .port-dropdown-toggle {
+  color: black;
+}
+
+.navbar-dark .navbar-toggler {
+  color: rgb(69, 173, 94);
+  border-color: black !important;
+  cursor: pointer;
+  //  background-image: 0 !important;
+}
+
+.navbar-light .navbar-toggler {
+  color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  //  background-image: 0 !important;
+}
+
+.navbar-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: #c4b7b8;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
