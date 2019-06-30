@@ -1,18 +1,13 @@
 {
   "name": "Portugles",
   "version": "1.0.0",
-  "engines": {
-    "node": "11.9.0"
-  },
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "node server/index.js",
     "build": "next build",
     "start": "NODE_ENV=production node server/index.js",
-    "heroku-postbuild": "npm run build",
-    "export": "next export",
-    "deploy": "npm run build && npm run export"
+    "heroku-postbuild": "npm run build"
   },
   "keywords": [],
   "author": "",
