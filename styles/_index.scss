@@ -81,13 +81,35 @@
   justify-content: flex-end;
 }
 
+@media (max-width: 421px) {
+  .hero-section,
+  .hero-section-content {
+    // width: 341px;
+    // height: 445px;
+    // width: auto;
+    // margin-bottom: 1rem;
+    // height: 15em;
+    //
+    // &-content {
+    //   width: 341px;
+    // }
+    h2 {
+      font-size: 1.25rem;
+    }
+  }
+  // .hero-section h2 {
+  //   background-color: #00000063;
+  //   width: 75%;
+  //   padding: 0.25rem;
+  // }
+}
+
 @media (max-width: 991px) {
   .hero-section {
     // width: 341px;
     // height: 445px;
     width: auto;
-    margin-bottom: 1rem;
-    height: 15em;
+    height: 14em;
 
     &-content {
       width: 341px;

@@ -52,3 +52,35 @@
     margin-bottom: 15px;
   }
 }
+
+// --------- Quiz Cards -------------
+
+.player-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+.player-container > iframe {
+  width: 400px;
+  height: 220px;
+}
+
+@media (max-width: 421px) {
+  .player-container > iframe {
+    width: auto;
+    height: 200px;
+  }
+}
+
+@media (max-width: 376px) {
+  .player-container > iframe {
+    width: 260px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 360px) {
+  .player-container > iframe {
+    width: 250px;
+    height: 170px;
+  }
+}

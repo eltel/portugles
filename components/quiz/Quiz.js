@@ -4,11 +4,35 @@ class Quiz extends React.Component {
 
     var dataSet = [
       {
+        video: (
+          <div className="player-container">
+            <iframe
+              width="auto"
+              height="auto"
+              src="https://www.youtube.com/embed/k4MPJKp8vGg"
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        ),
         question: "What is 8 x 1?",
         answers: ["1", "8", "16", "9"],
         correct: 1
       },
       {
+        video: (
+          <div className="player-container">
+            <iframe
+              width="auto"
+              height="auto"
+              src="https://www.youtube.com/embed/8NeNRk-v780"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            />
+          </div>
+        ),
         question: "Who is Steve Jobs?",
         answers: [
           "CEO of Microsoft",
@@ -113,10 +137,28 @@ class Quiz extends React.Component {
 }
 
 function Question(props) {
+  const iframe = (
+    <div className="player-container">
+      <iframe
+        width="auto"
+        height="auto"
+        src="https://www.youtube.com/embed/k4MPJKp8vGg"
+        frameBorder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+    </div>
+  );
   var style = {
     color: "red"
   };
-  return <h1 style={style}>{props.dataSet.question}</h1>;
+  return (
+    <div>
+      {props.dataSet.video}
+
+      <h1 style={style}>{props.dataSet.question}</h1>
+    </div>
+  );
 }
 
 function Answer(props) {
@@ -172,7 +214,6 @@ function TotalCorrect(props) {
     display: "inline-block",
     padding: ".5em",
     background: "#eee"
-    //  margin: "0 1em 0 0"
   };
   return <h2 style={style}>Correct: {props.correct}</h2>;
 }
@@ -183,13 +224,11 @@ function TotalIncorrect(props) {
     display: "inline-block",
     padding: ".5em",
     background: "#eee"
-    //  margin: "0 0 0 1em"
   };
   return <h2 style={style}>Incorrect: {props.incorrect}</h2>;
 }
 
 function ScoreArea(props) {
-  // const { current } = props;
   var style = {
     width: "100%",
     display: "block",
@@ -198,18 +237,6 @@ function ScoreArea(props) {
     padding: "2em"
   };
 
-  // if (current == 9) {
-  //   // this.setState({ current: 0 });
-  //   // this.setState({ incorrect: 0 });
-  //   // this.setState({ correct: 0 });
-  //   // alert("You've finished!! You scored " + { correct } + " out of 10!!");
-  //   alert("You've finished!! You scored " + props.correct + " out of 10!!");
-  // }
-
-  // if (props.correct === 10) {
-  //   //  console.log("Congratulations, you scored 100%!!");
-  //   // alert("You've finished!! You scored " + props.correct + " out of 10!!");
-  // }
   return (
     <div style={style}>
       <TotalCorrect correct={props.correct} />

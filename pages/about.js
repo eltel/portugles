@@ -12,32 +12,34 @@ class About extends React.Component {
             <Col md="6">
               <div className="left-side">
                 <h1 className="title fadein">Hi, Welcome</h1>
-                <h4 className="subtitle fadein">To the About Page</h4>
+                <h4 className="subtitle fadein">
+                  To the Portugles.com About Page
+                </h4>
                 <p className="subsubTitle fadein">
-                  Here's a short description of who we are and what we do..
+                  Here's a short description of who we are and what we do...
                 </p>
               </div>
             </Col>
             <Col md="6">
               <div className="fadein">
                 <p>
-                  My name is Filip Jerga and I am an experienced software
-                  engineer and freelance developer.{" "}
+                  Specialists in personalised, English language studies for
+                  Brazilians.{" "}
                 </p>
                 <p>
-                  I have a Master's degree in Artificial Intelligence and
-                  several years of experience working on a wide range of
-                  technologies and projects from C++ development for ultrasound
-                  devices to modern mobile and web applications in React and
-                  Angular.
+                  Classes are available both in-person and online via Skype and
+                  are tailored to the needs of the individual student. Private,
+                  in-person classes are only available at the school in Sorocaba
+                  at the moment - Skype classes are available throughout Brazil,
+                  depending on the quality of the student's internet connection.
                 </p>
                 <p>
-                  Throughout my career, I have acquired advanced technical
-                  knowledge and the ability to explain programming topics
-                  clearly and in detail to a broad audience. I invite you to
-                  take my course, where I have put a lot of effort to explain
-                  web and software engineering concepts in a detailed, hands-on
-                  and understandable way.
+                  Coordinated by a native English teacher from London, with 13+
+                  years experience of catering for the specific requirements of
+                  Brazilian students of English as a second language, at all
+                  levels. Translations of Portuguese language texts into English
+                  and text-revision/proofreading in English services are also
+                  available.
                 </p>
               </div>
             </Col>

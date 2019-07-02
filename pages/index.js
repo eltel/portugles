@@ -13,8 +13,10 @@ class Index extends React.Component {
     };
 
     this.roles = [
-      "In-Person English Classes",
-      "Online English Classes",
+      "English Classes...",
+      "...in-person (private)...",
+      "...or online",
+      "TOEFL/IELTS",
       "Text Translation",
       "Text Revision",
       "Level testing"
@@ -58,9 +60,16 @@ class Index extends React.Component {
                   <div className={`flipper ${isFlipping ? "isFlipping" : ""}`}>
                     <div className="front">
                       <div className="hero-section-content">
-                        <h2>English School & More</h2>
+                        <h2>
+                          <br />
+                          English School & More
+                        </h2>
                         <div className="hero-section-content-intro">
-                          <h3>Sign in, test yourself and learn English!.</h3>
+                          <h3>
+                            Sign in,
+                            <br /> test yourself
+                            <br /> & learn English!.
+                          </h3>
                         </div>
                       </div>
                       <img
@@ -74,8 +83,25 @@ class Index extends React.Component {
                     </div>
                     <div className="back">
                       <div className="hero-section-content">
-                        <h2>Learn from *native* English teachers</h2>
-                        <div className="hero-section-content-intro">
+                        <h2
+                          style={{
+                            backgroundColor: "#00000063",
+                            width: "75%",
+                            padding: "0.25rem"
+                          }}
+                        >
+                          Learn from <br />
+                          *native* <br />
+                          English teachers
+                        </h2>
+                        <div
+                          className="hero-section-content-intro"
+                          style={{
+                            backgroundColor: "#00000063",
+                            width: "75%",
+                            padding: "0.25rem"
+                          }}
+                        >
                           *Great Britain
                         </div>
                       </div>
@@ -94,7 +120,7 @@ class Index extends React.Component {
               <Col md="6" className="hero-welcome-wrapper">
                 <Typed
                   loop
-                  typeSpeed={100}
+                  typeSpeed={120}
                   backSpeed={40}
                   strings={this.roles}
                   smartBackspace
@@ -103,7 +129,7 @@ class Index extends React.Component {
                   className="self-typed"
                   loopCount={0}
                   showCursor
-                  cursorChar="|"
+                  cursorChar="."
                 />
                 <div className="hero-welcome-text">
                   <h1>
