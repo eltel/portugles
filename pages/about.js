@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col } from "reactstrap";
+
 import BaseLayout from "../components/layouts/BaseLayout";
 import BasePage from "../components/BasePage";
 
@@ -10,7 +11,7 @@ class About extends React.Component {
         <BasePage className="about-page">
           <Row className="mt-5">
             <Col md="6">
-              <div className="left-side">
+              <div className="left-side" style={{ width: "300px" }}>
                 <h1 className="title fadein">Hi, Welcome</h1>
                 <h4 className="subtitle fadein">
                   To the Portugles.com About Page

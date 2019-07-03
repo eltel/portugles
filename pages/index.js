@@ -1,6 +1,12 @@
 import React from "react";
 import Typed from "react-typed";
 import { Button, Container, Row, Col } from "reactstrap";
+import {
+  Image,
+  Video,
+  Transformation,
+  CloudinaryContext
+} from "cloudinary-react";
 
 import BaseLayout from "../components/layouts/BaseLayout";
 
@@ -177,12 +183,22 @@ class Index extends React.Component {
                 Aliquip malis iis mandaremus fidelissimae, quo eu exquisitaque.
                 Aute litteris instituendarum, ipsum te occaecat.
               </Col>
-              <Col>
-                <img
-                  className="schoolImage"
-                  alt="negative version of Hacker coding"
-                  src="/static/images/skool.jpg"
-                />
+              <Col md="6">
+                {/*  <img
+                    className="schoolImage"
+                    alt="negative version of Hacker coding"
+                    src="/static/images/skool.jpg"
+                  />*/}
+                <CloudinaryContext cloudName="setstate" fetchFormat="auto">
+                  <div className="image-holder">
+                    <Image
+                      publicId="veunc7hcfhuas89cn9s3.jpg"
+                      className="cld-img"
+                      responsive
+                      secure
+                    />
+                  </div>
+                </CloudinaryContext>
                 Right column Other stuff Legam aut te illum senserit te ut
                 export voluptate illustriora. Iis a fore consequat, fugiat
                 nostrud ex tractavissent. De ita firmissimum, nescius et velit

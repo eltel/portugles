@@ -72,3 +72,9 @@ body {
   // padding: 30px;
   // background-color: $secondary !important;
 }
+
+// ------------IMAGES ------------------
+
+.image-holder > img {
+  max-width: 100%;
+}

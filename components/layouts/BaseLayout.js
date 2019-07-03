@@ -19,23 +19,26 @@ const BaseLayout = props => {
         <title>{title}</title>
         <meta
           name="description"
-          content="We are setState({}) and we are experienced software engineers and freelance developers."
+          content="Portuglês.com 'The people from here, the language from there': English studies for Brazilian students."
         />
-
         <meta
           name="keywords"
-          content="setState({}) portfolio, setState({}) developer, setState({}) freelancing, setState({}) programming"
+          content="Portuglês, English, studies. Brazilian, students"
         />
         <meta
           property="og:title"
-          content="setState({}) - programmers, developers, bloggers"
+          content="Portuglês.com 'The people from here, the language from there': English studies for Brazilian students"
         />
-        <meta property="og:locale" content="en_EU" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/setstate/image/upload/v1562190941/ljmzttyqtdrylfv0bb3w.png"
+        />
+        <meta property="og:locale" content="en_GB" />
         <meta property="og:url" content={`${process.env.BASE_URL}`} />
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
-          content="We are setState({}) and we are experienced software engineers and freelance developers. We have a Master's degree in Artificial Intelligence and several years of experience working on a wide range of technologies and projects from C++ development for ultrasound devices to modern mobile and web applications in React and Angular. Throughout my career, We have acquired advanced technical knowledge and the ability to explain programming topics clearly and in detail to a broad audience."
+          content="Portuglês.com 'The people from here, the language from there': English studies for Brazilian students."
         />
         <link
           href="https://fonts.googleapis.com/css?family=Montserrat:300,700&display=swap"
