@@ -5,7 +5,7 @@ const withSass = require("@zeit/next-sass");
 const withCSS = require("@zeit/next-css");
 const optimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 // added withOffline(...) for PWA
-const nextconfig = withCSS(
+module.exports = withOffline(withCSS)(
   withSass({
     webpack(config, { dev }) {
       if (config.mode === "production") {
@@ -17,5 +17,3 @@ const nextconfig = withCSS(
     }
   })
 );
-
-module.exports = withOffline(nextconfig);

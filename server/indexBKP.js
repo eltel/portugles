@@ -1,14 +1,10 @@
 const express = require("express");
-// added { createServer } for PWA
-const { createServer } = require("http");
 const compression = require("compression");
 const path = require("path");
 const next = require("next");
 const mongoose = require("mongoose");
 const routes = require("../routes");
 const bodyParser = require("body-parser");
-// added { parse } for PWA
-const { parse } = require("url");
 
 const bookRoutes = require("./routes/book");
 const portfolioRoutes = require("./routes/portfolio");
@@ -56,20 +52,6 @@ app
     const server = express();
     server.use(compression());
     server.use(bodyParser.json());
-    // addedcreateServer for PWA
-    createServer((req, res) => {
-      const parsedUrl = parse(req.url, true);
-      const { pathname } = parsedUrl;
-
-      // handle GET request to /service-worker.js
-      if (pathname === "/service-worker.js") {
-        const filePath = join(__dirname, ".next", pathname);
-
-        app.serveStatic(req, res, filePath);
-      } else {
-        handle(req, res, parsedUrl);
-      }
-    });
 
     server.use("/api/v1/books", bookRoutes);
     server.use("/api/v1/portfolios", portfolioRoutes);
@@ -110,15 +92,15 @@ app
       if (err) throw err;
       console.log("> Ready on port " + PORT);
     });
-    // added if() for PWA
+    // added if(){} for PWA
     // handle GET request to /service-worker.js
-    // if (pathname === "/service-worker.js") {
-    //   const filePath = join(__dirname, ".next", pathname);
-    //
-    //   app.serveStatic(req, res, filePath);
-    // } else {
-    //   handle(req, res, parsedUrl);
-    // }
+    if (pathname === "/service-worker.js") {
+      const filePath = join(__dirname, ".next", pathname);
+
+      app.serveStatic(req, res, filePath);
+    } else {
+      handle(req, res, parsedUrl);
+    }
   })
   .catch(ex => {
     console.error(ex.stack);
