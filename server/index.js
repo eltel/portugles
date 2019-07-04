@@ -57,12 +57,12 @@ app
     server.use(compression());
     server.use(bodyParser.json());
     // addedcreateServer for PWA
-    createServer((req, res) => {
-      const parsedUrl = parse(req.url, true);
-      const { pathname } = parsedUrl;
+    // createServer((req, res) => {
+    //   const parsedUrl = parse(req.url, true);
+    //   const { pathname } = parsedUrl;
 
       // handle GET request to ../service-worker.js
-      express.get("/service-worker.js", function(request, response) {
+      server.get("/service-worker.js", function(request, response) {
         response.sendFile(
           path.resolve(__dirname, "../.next", "service-worker.js")
         );
