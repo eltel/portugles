@@ -1,11 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
+import Answer from "./Answer";
 
 const AnswerList = props => {
-  var answers = [];
+  const answers = [];
   for (let i = 0; i < props.dataSet.answers.length; i++) {
     answers.push(
       <Answer
+        key={answers.index}
         choice={i}
         handleClick={props.handleClick}
         answer={props.dataSet.answers[i]}

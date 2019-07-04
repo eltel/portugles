@@ -62,13 +62,18 @@ app
       const { pathname } = parsedUrl;
 
       // handle GET request to ../service-worker.js
-      if (pathname === "../service-worker.js") {
-        const filePath = join(__dirname, ".next", pathname);
-
-        app.serveStatic(req, res, filePath);
-      } else {
-        handle(req, res, parsedUrl);
-      }
+      express.get("/service-worker.js", function(request, response) {
+        response.sendFile(
+          path.resolve(__dirname, "../.next", "service-worker.js")
+        );
+      });
+      // if (pathname === "../service-worker.js") {
+      //   const filePath = join(__dirname, ".next", pathname);
+      //
+      //   app.serveStatic(req, res, filePath);
+      // } else {
+      //   handle(req, res, parsedUrl);
+      // }
     });
 
     server.use("/api/v1/books", bookRoutes);

@@ -1,9 +1,10 @@
 import React from "react";
-import PropTypes from "prop-types";
+import AnswerList from "./AnswerList";
+import Question from "./Question";
 
 const QuizArea = props => {
   var style = {
-    width: "25%",
+    width: "100%",
     display: "block",
     textAlign: "center",
     boxSizing: "border-box",

@@ -1,6 +1,6 @@
 // HEADER
 .port-navbar.port-nav-base {
-  width: 98.65%;
+  width: 100%;
   z-index: 15;
   // padding: 40px;
 
@@ -46,6 +46,13 @@
     color: white;
     margin-left: 10px;
     margin-right: 10px;
+  }
+}
+
+@media (max-width: 421px) {
+  .port-navbar.port-nav-base {
+    width: 92%;
+    z-index: 15;
   }
 }
 

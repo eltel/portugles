@@ -5,7 +5,13 @@ const Question = props => {
   var style = {
     color: "red"
   };
-  return <h1 style={style}>{props.dataSet.question}</h1>;
+  return (
+    <div>
+      {props.dataSet.video}
+
+      <h1 style={style}>{props.dataSet.question}</h1>
+    </div>
+  );
 };
 
 export default Question;

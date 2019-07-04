@@ -161,7 +161,7 @@ class Index extends React.Component {
               </Col>
             </Row>
             <Row>
-              <Col>
+              <Col className="leftColumn" style={{ marginTop: "5em" }}>
                 {" "}
                 Left column Foooter Conteeeeent (location etc??) and Legam aut
                 te illum senserit te ut export voluptate illustriora. Iis a fore
