@@ -61,8 +61,8 @@ app
       const parsedUrl = parse(req.url, true);
       const { pathname } = parsedUrl;
 
-      // handle GET request to ../service-worker.js
-      if (pathname === "../service-worker.js") {
+      // handle GET request to ../../service-worker.js
+      if (pathname === "../../service-worker.js") {
         const filePath = join(__dirname, ".next", pathname);
 
         app.serveStatic(req, res, filePath);
