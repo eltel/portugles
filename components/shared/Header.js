@@ -207,7 +207,8 @@ export default class Header extends React.Component {
           </NavbarBrand>
           <NavbarToggler
             onClick={this.toggle}
-            name="navigation-toggle"
+            name="open-menu"
+            value="open-menu"
             className=".navbar-light .navbar-toggler-icon"
           />
           <Collapse isOpen={this.state.isOpen} navbar>
@@ -280,6 +281,7 @@ export default class Header extends React.Component {
                   <Image
                     publicId="qtlh720szyxmigrpmvpb.png"
                     className="cld-img"
+                    alt="site-logo"
                     responsive
                     secure
                   />

@@ -78,7 +78,8 @@ class Index extends React.Component {
                           </h3>
                         </div>
                       </div>
-                      <CloudinaryContext
+
+                      {/*<CloudinaryContext
                         cloudName="setstate"
                         fetchFormat="auto"
                       >
@@ -91,7 +92,20 @@ class Index extends React.Component {
                             secure
                           />
                         </div>
-                      </CloudinaryContext>
+                      </CloudinaryContext>*/}
+                      <div className="image-holder">
+                        <Image
+                          cloudName="setstate"
+                          fetchFormat="auto"
+                          publicId="jihgp26s1q2y7pd0hbxl.jpg"
+                          alt="British Flag"
+                          className="cld-img"
+                          responsive
+                          secure
+                        >
+                          <Transformation quality="auto:eco" />
+                        </Image>
+                      </div>
                       {/*<img
                         className="image"
                         alt="Hacker coding"
@@ -126,7 +140,20 @@ class Index extends React.Component {
                           *Great Britain
                         </div>
                       </div>
-                      <CloudinaryContext
+                      <div className="image-holder">
+                        <Image
+                          cloudName="setstate"
+                          fetchFormat="auto"
+                          publicId="yxwdn7xxrox0ws0zwdjh.jpg"
+                          alt="British Flag"
+                          className="cld-img"
+                          responsive
+                          secure
+                        >
+                          <Transformation quality="auto:eco" />
+                        </Image>
+                      </div>
+                      {/*<CloudinaryContext
                         cloudName="setstate"
                         fetchFormat="auto"
                       >
@@ -139,7 +166,8 @@ class Index extends React.Component {
                             secure
                           />
                         </div>
-                      </CloudinaryContext>
+                      </CloudinaryContext>*/}
+
                       {/*<img
                           className="image"
                           alt="negative version of Hacker coding"
@@ -219,16 +247,30 @@ class Index extends React.Component {
                     alt="negative version of Hacker coding"
                     src="/static/images/skool.jpg"
                   />*/}
-                <CloudinaryContext cloudName="setstate" fetchFormat="auto">
-                  <div className="image-holder">
-                    <Image
-                      publicId="veunc7hcfhuas89cn9s3.jpg"
-                      className="cld-img"
-                      responsive
-                      secure
-                    />
-                  </div>
-                </CloudinaryContext>
+                {/*<CloudinaryContext cloudName="setstate" fetchFormat="auto">
+                    <div className="image-holder">
+                      <Image
+                        publicId="veunc7hcfhuas89cn9s3.jpg"
+                        className="cld-img"
+                        alt="blog-image"
+                        responsive
+                        secure
+                      />
+                    </div>
+                  </CloudinaryContext>*/}
+                <div className="image-holder">
+                  <Image
+                    cloudName="setstate"
+                    fetchFormat="auto"
+                    publicId="veunc7hcfhuas89cn9s3.jpg"
+                    className="cld-img"
+                    alt="blog-image"
+                    responsive
+                    secure
+                  >
+                    <Transformation quality="auto:eco" />
+                  </Image>
+                </div>
                 Right column Other stuff Legam aut te illum senserit te ut
                 export voluptate illustriora. Iis a fore consequat, fugiat
                 nostrud ex tractavissent. De ita firmissimum, nescius et velit
