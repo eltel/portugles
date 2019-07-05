@@ -56,6 +56,7 @@ const BaseLayout = props => {
           rel="apple-touch-icon-precomposed"
           href="/static/images/apple-touch-icon.png"
         />
+        <link rel="manifest" href="/static/manifest.json" />
       </Head>
       <div className="layout-container">
         <Header
