@@ -10,7 +10,7 @@
     "heroku-postbuild": "npm run build"
   },
   "keywords": [],
-  "author": "",
+  "author": "setState",
   "license": "ISC",
   "dependencies": {
     "@zeit/next-css": "^1.0.1",

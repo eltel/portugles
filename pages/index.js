@@ -56,9 +56,9 @@ class Index extends React.Component {
         title="Portuglês - Home Page"
       >
         <div className="main-section">
-          <div className="background-image">
+          {/*<div className="background-image">
             <img src="" />
-          </div>
+          </div>*/}
           <Container>
             <Row>
               <Col md="6">
@@ -78,11 +78,26 @@ class Index extends React.Component {
                           </h3>
                         </div>
                       </div>
-                      <img
+                      <CloudinaryContext
+                        cloudName="setstate"
+                        fetchFormat="auto"
+                      >
+                        <div className="image-holder">
+                          <Image
+                            publicId="jihgp26s1q2y7pd0hbxl.jpg"
+                            className="cld-img"
+                            alt="Brazilian Flag"
+                            responsive
+                            secure
+                          />
+                        </div>
+                      </CloudinaryContext>
+                      {/*<img
                         className="image"
                         alt="Hacker coding"
-                        src="/static/images/brazilian-flag.jpg"
-                      />
+                        src="https://res.cloudinary.com/setstate/image/upload/v1562357091/jihgp26s1q2y7pd0hbxl.jpg"
+                      />*/}
+
                       <div className="shadow-custom">
                         <div className="shadow-inner"> </div>
                       </div>
@@ -111,11 +126,26 @@ class Index extends React.Component {
                           *Great Britain
                         </div>
                       </div>
-                      <img
-                        className="image"
-                        alt="negative version of Hacker coding"
-                        src="/static/images/britishFlag.jpg"
-                      />
+                      <CloudinaryContext
+                        cloudName="setstate"
+                        fetchFormat="auto"
+                      >
+                        <div className="image-holder">
+                          <Image
+                            publicId="yxwdn7xxrox0ws0zwdjh.jpg"
+                            className="cld-img"
+                            alt="British Flag"
+                            responsive
+                            secure
+                          />
+                        </div>
+                      </CloudinaryContext>
+                      {/*<img
+                          className="image"
+                          alt="negative version of Hacker coding"
+                          src="https://res.cloudinary.com/setstate/image/upload/v1562357090/yxwdn7xxrox0ws0zwdjh.jpg"
+                        />*/}
+
                       <div className="shadow-custom shadow-custom-2">
                         <div className="shadow-inner"> </div>
                       </div>

@@ -96,13 +96,13 @@ app
           .send({ title: "Unauthorized", detail: "Unauthorized Access!!" });
       }
 
-      if (process.env.NODE_ENV === "production") {
-        server.use((req, res, next) => {
-          if (req.header("x-forwarded-proto") !== "https")
-            res.redirect(`https://${req.header("host")}${req.url}`);
-          else next();
-        });
-      }
+      // if (process.env.NODE_ENV === "production") {
+      //   server.use((req, res, next) => {
+      //     if (req.header("x-forwarded-proto") !== "https")
+      //       res.redirect(`https://${req.header("host")}${req.url}`);
+      //     else next();
+      //   });
+      // }
     });
 
     const PORT = process.env.PORT || 3000;

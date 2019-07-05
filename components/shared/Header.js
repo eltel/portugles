@@ -1,6 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import {
+  Image,
+  Video,
+  Transformation,
+  CloudinaryContext
+} from "cloudinary-react";
+import {
   Collapse,
   Navbar,
   NavbarToggler,
@@ -201,6 +207,7 @@ export default class Header extends React.Component {
           </NavbarBrand>
           <NavbarToggler
             onClick={this.toggle}
+            name="navigation-toggle"
             className=".navbar-light .navbar-toggler-icon"
           />
           <Collapse isOpen={this.state.isOpen} navbar>
@@ -268,7 +275,17 @@ export default class Header extends React.Component {
         <Row>
           <Col sm="12" md={{ size: 6, offset: 6 }}>
             <div className="header-logo">
-              <img src="/static/images/logo.png" alt="" />
+              <CloudinaryContext cloudName="setstate" fetchFormat="auto">
+                <div className="image-holder">
+                  <Image
+                    publicId="qtlh720szyxmigrpmvpb.png"
+                    className="cld-img"
+                    responsive
+                    secure
+                  />
+                </div>
+              </CloudinaryContext>
+              {/*<img src="/static/images/logo.png" alt="" />*/}
               <div className="strapline">
                 <p className="strapline-text">
                   The people from here - the language from there <br />
