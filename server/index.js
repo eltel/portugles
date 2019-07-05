@@ -56,10 +56,6 @@ app
     const server = express();
     server.use(compression());
     server.use(bodyParser.json());
-    // addedcreateServer for PWA
-    // createServer((req, res) => {
-    //   const parsedUrl = parse(req.url, true);
-    //   const { pathname } = parsedUrl;
 
     // handle GET request to ../service-worker.js
     server.get("/service-worker.js", function(request, response) {
@@ -67,14 +63,6 @@ app
         path.resolve(__dirname, "../.next", "service-worker.js")
       );
     });
-    // if (pathname === "../service-worker.js") {
-    //   const filePath = join(__dirname, ".next", pathname);
-    //
-    //   app.serveStatic(req, res, filePath);
-    // } else {
-    //   handle(req, res, parsedUrl);
-    // }
-    //  });
 
     server.use("/api/v1/books", bookRoutes);
     server.use("/api/v1/portfolios", portfolioRoutes);
@@ -106,6 +94,14 @@ app
         res
           .status(401)
           .send({ title: "Unauthorized", detail: "Unauthorized Access!!" });
+      }
+
+      if (process.env.NODE_ENV === "production") {
+        server.use((req, res, next) => {
+          if (req.header("x-forwarded-proto") !== "https")
+            res.redirect(`https://${req.header("host")}${req.url}`);
+          else next();
+        });
       }
     });
 
