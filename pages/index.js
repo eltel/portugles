@@ -66,15 +66,7 @@ class Index extends React.Component {
                   <div className={`flipper ${isFlipping ? "isFlipping" : ""}`}>
                     <div className="front">
                       <div className="hero-section-content">
-                        <h2
-                          style={{
-                            width: "75%",
-                            position: "relative",
-                            marginTop: "0.25rem"
-                          }}
-                        >
-                          <br />
-                          {""}
+                        <h2>
                           {""}
                           English School & More
                         </h2>
@@ -127,26 +119,13 @@ class Index extends React.Component {
                     </div>
                     <div className="back">
                       <div className="hero-section-content">
-                        <h2
-                          style={{
-                            backgroundColor: "#00000063",
-                            width: "75%",
-                            padding: "0.25rem"
-                          }}
-                        >
+                        <h2>
                           Learn from <br />
                           *native* <br />
                           English teachers
                         </h2>
-                        <div
-                          className="hero-section-content-intro"
-                          style={{
-                            backgroundColor: "#00000063",
-                            width: "75%",
-                            padding: "0.25rem"
-                          }}
-                        >
-                          *Great Britain
+                        <div className="hero-section-content-intro">
+                          <h4>*Great Britain</h4>
                         </div>
                       </div>
                       <div className="image-holder">
