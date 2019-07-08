@@ -9,7 +9,7 @@ const Question = props => {
     <div>
       {props.dataSet.video}
 
-      <h1 style={style}>{props.dataSet.question}</h1>
+      <h3 style={style}>{props.dataSet.question}</h3>
     </div>
   );
 };

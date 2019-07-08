@@ -66,8 +66,16 @@ class Index extends React.Component {
                   <div className={`flipper ${isFlipping ? "isFlipping" : ""}`}>
                     <div className="front">
                       <div className="hero-section-content">
-                        <h2>
+                        <h2
+                          style={{
+                            width: "75%",
+                            position: "relative",
+                            marginTop: "0.25rem"
+                          }}
+                        >
                           <br />
+                          {""}
+                          {""}
                           English School & More
                         </h2>
                         <div className="hero-section-content-intro">
@@ -97,6 +105,7 @@ class Index extends React.Component {
                         <Image
                           cloudName="setstate"
                           fetchFormat="auto"
+                          crop="scale"
                           publicId="jihgp26s1q2y7pd0hbxl.jpg"
                           alt="British Flag"
                           className="cld-img"
@@ -144,6 +153,7 @@ class Index extends React.Component {
                         <Image
                           cloudName="setstate"
                           fetchFormat="auto"
+                          crop="scale"
                           publicId="yxwdn7xxrox0ws0zwdjh.jpg"
                           alt="British Flag"
                           className="cld-img"
@@ -219,7 +229,7 @@ class Index extends React.Component {
               </Col>
             </Row>
             <Row>
-              <Col className="leftColumn" style={{ marginTop: "5em" }}>
+              <Col className="leftColumn" style={{ marginTop: ".5em" }}>
                 {" "}
                 Left column Foooter Conteeeeent (location etc??) and Legam aut
                 te illum senserit te ut export voluptate illustriora. Iis a fore
@@ -262,6 +272,8 @@ class Index extends React.Component {
                   <Image
                     cloudName="setstate"
                     fetchFormat="auto"
+                    quality="auto"
+                    crop="scale"
                     publicId="veunc7hcfhuas89cn9s3.jpg"
                     className="cld-img"
                     alt="blog-image"

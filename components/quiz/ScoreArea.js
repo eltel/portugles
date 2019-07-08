@@ -6,9 +6,7 @@ const ScoreArea = props => {
   var style = {
     width: "100%",
     display: "block",
-    textAlign: "left",
-    float: "left",
-    padding: "2em"
+    textAlign: "left"
   };
   return (
     <div style={style}>

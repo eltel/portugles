@@ -43,7 +43,7 @@ class Quiz extends React.Component {
         />
         <QuizArea
           handleClick={this.handleClick}
-          dataSet={this.state.dataSet[this.state.current]}
+          dataSet={this.props.level[this.state.current]}
         />
       </div>
     );

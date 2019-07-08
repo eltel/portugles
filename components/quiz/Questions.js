@@ -100,7 +100,7 @@ export const dataSet2 = [
         />
       </div>
     ),
-    question: "What is the answer to the question?",
+    question: "What is the answer to the question2?",
     answers: ["this", "that", "the other", "none of the above!"],
     correct: 1
   },
@@ -189,7 +189,7 @@ export const dataSet3 = [
       </div>
     ),
     id: 1,
-    question: "What is the answer to the question?",
+    question: "What is the answer to the question3?",
     answers: ["this", "that", "the other", "none of the above!"],
     correct: 1
   },

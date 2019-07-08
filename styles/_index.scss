@@ -26,7 +26,7 @@
 
   perspective: 1000px;
   color: white;
-  // width: 400px;
+  width: 420px;
   position: relative;
 
   &-content {
@@ -84,6 +84,8 @@
 @media (max-width: 421px) {
   .hero-section,
   .hero-section-content {
+    max-height: 200px;
+
     h2 {
       font-size: 1.25rem;
     }
@@ -95,13 +97,13 @@
     // width: 341px;
     // height: 445px;
     width: auto;
-    height: 14em;
+    height: 12.25em;
 
     &-content {
       width: 341px;
 
       h2 {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
       }
     }
   }

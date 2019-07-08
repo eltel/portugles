@@ -7,9 +7,7 @@ const QuizArea = props => {
     width: "100%",
     display: "block",
     textAlign: "center",
-    boxSizing: "border-box",
-    float: "left",
-    padding: "0 2em"
+    boxSizing: "border-box"
   };
   return (
     <div style={style}>
