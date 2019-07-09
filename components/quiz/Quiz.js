@@ -11,7 +11,7 @@ class Quiz extends React.Component {
   constructor(props) {
     super(props);
 
-    const dataSet = dataSet3;
+    //  const dataSet = dataSet3;
 
     this.state = { current: 0, dataSet: dataSet, correct: 0, incorrect: 0 };
     this.handleClick = this.handleClick.bind(this);
@@ -19,6 +19,7 @@ class Quiz extends React.Component {
   } // end constructor
 
   handleClick(choice) {
+    const { keepScore } = this.props;
     const { correct } = this.state;
     if (choice == this.state.dataSet[this.state.current].correct) {
       this.setState({ correct: this.state.correct + 1 });
@@ -28,6 +29,7 @@ class Quiz extends React.Component {
 
     if (this.state.current == 9) {
       alert("You've finished!! You scored " + correct + " out of 10!!");
+      keepScore();
     } else {
       this.setState({ current: this.state.current + 1 });
     }

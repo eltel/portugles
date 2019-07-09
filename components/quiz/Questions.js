@@ -25,7 +25,7 @@ export const dataSet = [
           src="https://www.youtube.com/embed/8NeNRk-v780"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         />
       </div>
     ),

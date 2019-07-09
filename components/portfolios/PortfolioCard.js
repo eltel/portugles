@@ -26,7 +26,7 @@ class PortfolioCard extends React.Component {
   }
 
   render() {
-    const { portfolio, children } = this.props;
+    const { portfolio, children, isAuthenticated, user } = this.props;
     const { isOpen } = this.state;
     return (
       <span onClick={this.handleToggle}>
@@ -34,6 +34,8 @@ class PortfolioCard extends React.Component {
           toggle={this.handleToggle}
           portfolio={portfolio}
           isOpen={isOpen}
+          isAuthenticated={isAuthenticated}
+          user={user}
         />
         <Card className="portfolio-card">
           <CardHeader className="portfolio-card-header">

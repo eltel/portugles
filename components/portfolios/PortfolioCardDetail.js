@@ -3,61 +3,65 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import moment from "moment";
 import { dataSet, dataSet2, dataSet3 } from "../quiz/Questions";
 
+import BaseLayout from "../layouts/BaseLayout";
 import Quiz from "../quiz/Quiz";
 
-// const title = portfolio.title;
-// const getLevel = title => {
-//   if (title === "Beginner") {
-//     return <Quiz />;
-//   } else {
-//     return "No Quiz Here!!";
-//   }
-// };
-
-// const isBeginner = title === "Beginner";
-
 class PortfolioCardDetail extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { userTestScore: 0, testLevel: "" };
+  }
+
+  keepScore(score) {
+    score = this.state.userTestScore;
+    score = score + correct;
+    setState({ score });
+    console.log("score", score);
+  }
   render() {
-    const { isOpen, toggle, portfolio } = this.props;
+    //  const { isAuthenticated, user } = this.props.auth;
+    const { userTestScore, testLevel } = this.state;
+
+    const { isOpen, toggle, portfolio, user } = this.props;
     const title = portfolio.title;
 
     console.log("title output", title);
-
-    // const getLevel = title => {
-    //   if (this.title === "Beginner") {
-    //     return <Quiz level={dataSet} />;
-    //   } else if (this.title === "Intermediate") {
-    //     return <Quiz level={dataSet2} />;
-    //   } else if (this.title === "Advanced") {
-    //     return <Quiz level={dataSet3} />;
-    //   }
-    // };
-
-    // const GetLevel = props =>
-    //   props.title === "Beginner" ? (
-    //     <Quiz level={dataSet} />
-    //   ) : props.title === "Intermediate" ? (
-    //     <Quiz level={dataSet2} />
-    //   ) : (
-    //     <Quiz level={dataSet3} />
-    //   );
-    // const level = title => {
-    //   this.getLevel();
-    // };
-    //
-    // console.log("getLevel output", level);
-
     return (
-      <div>
+      <div {...this.props.auth}>
         <Modal isOpen={isOpen} toggle={toggle}>
           <ModalHeader toggle={toggle}>
             <b>{portfolio.title}</b>
           </ModalHeader>
           <ModalBody>
             <b>Test: </b>
-            {title === "Beginner " && <Quiz level={dataSet} />}
-            {title === "Intermediate" && <Quiz level={dataSet2} />}
-            {title === "Advanced " && <Quiz level={dataSet3} />}
+            {title === "Beginner " && (
+              <Quiz
+                level={dataSet}
+                keepScore={this.keepScore}
+                user={user}
+                userTestScore={userTestScore}
+                testLevel={"beginner"}
+              />
+            )}
+            {title === "Intermediate" && (
+              <Quiz
+                level={dataSet2}
+                keepScore={this.keepScore}
+                user={user}
+                userTestScore={userTestScore}
+                testLevel={"intermediate"}
+              />
+            )}
+            {title === "Advanced " && (
+              <Quiz
+                level={dataSet3}
+                keepScore={this.keepScore}
+                user={user}
+                userTestScore={userTestScore}
+                testLevel={"Advanced"}
+              />
+            )}
           </ModalBody>
           <ModalFooter>
             <Button color="secondary" onClick={toggle}>

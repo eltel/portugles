@@ -42,12 +42,16 @@ class Portfolios extends React.Component {
   }
 
   renderPortfolios(portfolios) {
-    const { isAuthenticated, isSiteOwner } = this.props.auth;
+    const { isAuthenticated, isSiteOwner, user } = this.props.auth;
 
     return portfolios.map((portfolio, index) => {
       return (
         <Col md="4" key={index}>
-          <PortfolioCard portfolio={portfolio}>
+          <PortfolioCard
+            portfolio={portfolio}
+            auth={isAuthenticated}
+            user={user}
+          >
             {isAuthenticated && isSiteOwner && (
               <React.Fragment>
                 <Button
