@@ -274,7 +274,11 @@ export default class Header extends React.Component {
           </Collapse>
         </Navbar>
         <Row>
-          <Col sm="12" md={{ size: 6, offset: 6 }}>
+          <Col
+            sm="12"
+            md={{ size: 6, offset: 6 }}
+            style={{ textAlign: "center" }}
+          >
             <div className="header-logo">
               <CloudinaryContext cloudName="setstate" fetchFormat="auto">
                 <div className="image-holder">

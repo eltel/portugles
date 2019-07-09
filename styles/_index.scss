@@ -12,7 +12,6 @@
 }
 
 .main-section {
-  top: 150px;
   width: 100%;
   padding: 150px 0 0;
 }
@@ -33,7 +32,7 @@
     position: absolute;
     bottom: 20px;
     width: 360px;
-    left: 6%;
+    margin-left: 0.5em;
     z-index: 1;
 
     &-intro {
@@ -92,13 +91,10 @@
     width: 350px;
     height: 12.25em;
     margin: 0 auto;
-    width: 320px;
-    // // height: 445px;
-    // // width: auto;
     height: 12.25em;
 
     &-content {
-      width: 341px;
+      width: auto;
 
       h2 {
         font-size: 1.25rem;
@@ -125,7 +121,7 @@
   .hero-section,
   .hero-section-content .hero-section-content-intro {
     max-height: 200px;
-    width: 380px;
+    width: 350px;
     margin: 0 auto;
 
     h2 {
@@ -140,14 +136,18 @@
   }
 
   .hero-welcome-wrapper {
-    margin-top: 3.5em;
+    margin-top: 0;
   }
 }
 
 @media (max-width: 421px) {
+  .main-section {
+    padding-top: 2em;
+  }
+
   .hero-section,
   .hero-section-content .hero-section-content-intro {
-    max-height: 200px;
+    //  max-height: 200px;
 
     h2 {
       font-size: 1.5rem;
@@ -159,12 +159,29 @@
       font-size: 1.2rem;
     }
   }
+  .image-holder {
+    text-align: center;
+    width: 335px;
+  }
+  .hero-welcome-wrapper {
+    margin-top: 1.5em;
+  }
+}
+
+@media (max-width: 376px) {
+  .main-section {
+    padding-top: 3em;
+  }
+
+  .hero-section,
+  .hero-section-content .hero-section-content-intro {
+    width: 330px;
+  }
 }
 
 @media (max-width: 361px) {
   .hero-section,
   .hero-section-content .hero-section-content-intro {
-    max-height: 200px;
     width: 275px;
 
     h2 {
@@ -180,9 +197,13 @@
 }
 
 @media (max-width: 321px) {
+  .main-section {
+    padding-top: 2em;
+  }
+
   .hero-section,
   .hero-section-content .hero-section-content-intro {
-    max-height: 200px;
+    width: 250px;
 
     h2 {
       font-size: 1rem;
@@ -192,6 +213,10 @@
     h3 {
       font-size: 0.95rem;
     }
+  }
+  .front,
+  .back {
+    margin-top: 1em;
   }
 }
 
@@ -249,6 +274,7 @@
   // transform: rotateY(0deg);
   -webkit-backface-visibility: hidden;
   -webkit-transform: translateZ(0) scale(1, 1);
+  // min-width: 100vw;
 }
 
 .front {

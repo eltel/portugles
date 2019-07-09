@@ -21,13 +21,34 @@ body {
 }
 
 .layout-container {
-  padding: 1rem;
-  min-width: 100vw;
+  //  padding: 1rem;
+  // min-width: 100vw;
 }
 
 @media (max-width: 991px) {
   body {
     padding: 0.5rem;
+  }
+}
+
+@media (max-width: 441px) {
+  html,
+  body {
+    min-width: 430px;
+  }
+}
+
+@media (max-width: 376px) {
+  html,
+  body {
+    min-width: 360px;
+  }
+}
+
+@media (max-width: 321px) {
+  html,
+  body {
+    min-width: 320px;
   }
 }
 
