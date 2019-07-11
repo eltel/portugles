@@ -26,6 +26,7 @@
   perspective: 1000px;
   color: white;
   width: 420px;
+  margin: 0 auto;
   position: relative;
 
   &-content {
@@ -85,6 +86,15 @@
     width: auto;
   }
 }
+.leftColumn-row {
+  margin-top: 2em;
+}
+
+@media (min-width: 1360px) {
+  .leftColumn-row {
+    margin-top: 2em;
+  }
+}
 
 @media (max-width: 991px) {
   .hero-section {
@@ -92,6 +102,7 @@
     height: 12.25em;
     margin: 0 auto;
     height: 12.25em;
+    margin-bottom: 1em;
 
     &-content {
       width: auto;
@@ -109,11 +120,15 @@
 
 @media (max-width: 769px) {
   .hero-section {
-    width: 375px;
-    margin-bottom: 1em;
+    width: 300px;
+    margin-top: 20%;
   }
   .hero-welcome-wrapper {
     margin-top: 1em;
+  }
+
+  .image-holder {
+    width: 300px;
   }
 }
 
@@ -147,10 +162,9 @@
 
   .hero-section,
   .hero-section-content .hero-section-content-intro {
-    //  max-height: 200px;
-
+    width: 320px;
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       background-color: #00000063;
       width: 75%;
       padding: 0.25rem;
@@ -160,9 +174,9 @@
     }
   }
   .image-holder {
-    text-align: center;
-    width: 335px;
+    width: 320px;
   }
+
   .hero-welcome-wrapper {
     margin-top: 1.5em;
   }
@@ -175,7 +189,7 @@
 
   .hero-section,
   .hero-section-content .hero-section-content-intro {
-    width: 330px;
+    width: 300px;
   }
   .image-holder {
     width: 300px;
@@ -185,7 +199,7 @@
 @media (max-width: 361px) {
   .hero-section,
   .hero-section-content .hero-section-content-intro {
-    width: 275px;
+    width: 295px;
 
     h2 {
       font-size: 1.3rem;
@@ -196,6 +210,9 @@
     h3 {
       font-size: 1.2rem;
     }
+  }
+  .image-holder {
+    width: 295px;
   }
 }
 
@@ -216,6 +233,9 @@
     h3 {
       font-size: 0.95rem;
     }
+  }
+  .image-holder {
+    width: 250px;
   }
   .front,
   .back {

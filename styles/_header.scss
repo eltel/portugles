@@ -1,6 +1,17 @@
 // HEADER
+// .port-navbar
+//   .port-nav-base
+//   .absolute
+//   .port-nav-index
+//   .menu-closed
+//   .navbar
+//   .navbar-expand-md
+//   .navbar-dark
+//   .bg-transparent {
+//   width: 90%;
+// }
 .port-navbar.port-nav-base {
-  width: 100%;
+  width: 95%;
   z-index: 15;
   // padding: 40px;
 
@@ -121,6 +132,11 @@
 // -----------@media queries-------------------------------------
 
 @media (max-width: 991px) {
+  .port-navbar.port-nav-base {
+    width: 95%;
+    z-index: 15;
+  }
+
   .header-logo {
     top: 11vh;
 
@@ -145,6 +161,12 @@
   }
 }
 
+@media (max-width: 769px) {
+  .header-logo {
+    top: 6vh;
+  }
+}
+
 @media (max-width: 421px) {
   .header-logo {
     top: 0.5vh;
@@ -152,8 +174,7 @@
   }
   .port-navbar.port-nav-base {
     position: static;
-    width: 92%;
-    margin: 0 auto;
+    width: 90vw;
   }
 }
 

@@ -20,14 +20,27 @@ body {
   background-image: url(/static/images/beige-tiles-opacity40.png);
 }
 
+.container {
+  max-width: 100%;
+}
+
 .layout-container {
-  //  padding: 1rem;
-  // min-width: 100vw;
+  margin: 0 auto;
+  max-width: 90%;
 }
 
 @media (max-width: 991px) {
   body {
     padding: 0.5rem;
+  }
+}
+
+@media (max-width: 769px) {
+  .layout-container {
+    max-width: 95%;
+  }
+  .main-section {
+    padding: 60px 0 0;
   }
 }
 

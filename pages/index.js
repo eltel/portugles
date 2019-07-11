@@ -207,7 +207,7 @@ class Index extends React.Component {
                 </div>
               </Col>
             </Row>
-            <Row>
+            <Row className="leftColumn-row">
               <Col className="leftColumn" style={{ marginTop: ".5em" }}>
                 {" "}
                 Left column Foooter Conteeeeent (location etc??) and Legam aut
