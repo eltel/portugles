@@ -205,6 +205,7 @@ export default class Header extends React.Component {
           <NavbarBrand className="port-navbar-brand port-navbar-link" href="/">
             Portuglês.com
           </NavbarBrand>
+          <div id="notifications" />
           <NavbarToggler
             onClick={this.toggle}
             name="open-menu"
@@ -263,9 +264,16 @@ export default class Header extends React.Component {
                     {/*  <DropdownItem>
                         <BootstrapNavLink route="/blogs/new" title="Create" />
                       </DropdownItem> */}
+                    {/*<DropdownItem>
+                        <div id="notifications" />
+                      </DropdownItem>*/}
+
                     <DropdownItem>
                       {" "}
                       <BootstrapNavLink route="/profile" title="Profile" />
+                    </DropdownItem>
+                    <DropdownItem>
+                      <BootstrapNavLink route="/blogs" title="Material" />
                     </DropdownItem>
                   </DropdownMenu>
                 </Dropdown>
