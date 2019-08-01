@@ -223,11 +223,12 @@ export default class Header extends React.Component {
               {/*<NavItem className="port-navbar-item">
                 <BootstrapNavLink route="/cv" title="CV" />
               </NavItem>*/}
-              {!isAuthenticated && (
-                <NavItem className="port-navbar-item">
-                  <BootstrapNavLink route="/studyLoggedOut" title="Testing!" />
-                </NavItem>
-              )}
+              {/*  {!isAuthenticated && (
+                  <NavItem className="port-navbar-item">
+                    <BootstrapNavLink route="/studyLoggedOut" title="Testing!" />
+                  </NavItem>
+                )}*/}
+
               {!isAuthenticated && (
                 <NavItem className="port-navbar-item">
                   <Login />
@@ -239,11 +240,12 @@ export default class Header extends React.Component {
                   <Logout />
                 </NavItem>
               )}
-              {isAuthenticated && (
-                <NavItem className="port-navbar-item">
-                  <BootstrapNavLink route="/portfolios" title="Testing!!" />
-                </NavItem>
-              )}
+              {/*  {isAuthenticated && (
+                  <NavItem className="port-navbar-item">
+                    <BootstrapNavLink route="/portfolios" title="Testing!!" />
+                  </NavItem>
+                )}*/}
+
               {isAuthenticated && (
                 <Dropdown
                   className="port-navbar-link"
@@ -272,9 +274,9 @@ export default class Header extends React.Component {
                       {" "}
                       <BootstrapNavLink route="/profile" title="Profile" />
                     </DropdownItem>
-                    <DropdownItem>
+                    {/*<DropdownItem>
                       <BootstrapNavLink route="/blogs" title="Material" />
-                    </DropdownItem>
+                    </DropdownItem>*/}
                   </DropdownMenu>
                 </Dropdown>
               )}

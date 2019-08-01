@@ -15,8 +15,7 @@ class Index extends React.Component {
     super(props);
 
     this.state = {
-      isFlipping: false,
-      isLoading: true
+      isFlipping: false
     };
 
     this.roles = [
@@ -32,9 +31,6 @@ class Index extends React.Component {
 
   componentDidMount() {
     this.animateCard();
-    setTimeout(() => {
-      this.setState({ isLoading: false });
-    }, 2100);
   }
 
   componentWillUnmount() {
@@ -52,9 +48,7 @@ class Index extends React.Component {
   render() {
     const { isFlipping } = this.state;
     const { isAuthenticated, user } = this.props.auth;
-    return this.state.isLoading ? (
-      <div>Loading...</div>
-    ) : (
+    return (
       <BaseLayout
         {...this.props.auth}
         className={`cover ${isFlipping ? "cover-1" : "cover-0"}`}
