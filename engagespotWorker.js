@@ -1,1 +1,1 @@
-importScripts('https://mrpush.engagespot.co/sw.php');
+importScripts('https://portuglêscom.engagespot.co/sw.php');
