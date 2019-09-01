@@ -12,8 +12,8 @@ class Profile extends React.Component {
             <Col md={{ size: 8, offset: 2 }}>
               <div>
                 <h1>
-                  Full profile functionality coming soon, all of your material
-                  and testing and account details will be accessible here!!
+                  Full profile functionality coming soon, all of your material,
+                  testing and account details will be accessible here!!
                 </h1>
               </div>
             </Col>

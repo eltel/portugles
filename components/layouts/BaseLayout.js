@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../shared/Header";
 import Head from "next/head";
 
-import engagespot from "../../engagespot";
+// import { engagespot } from "../../engagespot";
 
 const BaseLayout = props => {
   const {
@@ -60,7 +60,6 @@ const BaseLayout = props => {
         />
         <meta name="theme-color" content="#ffffff" />
         <link rel="manifest" href="/static/manifest.json" />
-        <script>engagespot()</script>
       </Head>
       <div className="layout-container">
         <Header

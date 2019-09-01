@@ -38,7 +38,7 @@ const BootstrapNavLink = props => {
 const Login = () => {
   return (
     <span onClick={auth0.login} className="nav-link port-navbar-link clickable">
-      Login
+      Login/Register
     </span>
   );
 };
@@ -209,6 +209,9 @@ export default class Header extends React.Component {
           <NavbarToggler
             onClick={this.toggle}
             name="open-menu"
+            id="navbar-toggle"
+            title="navbar-toggle"
+            aria-label="navbar-toggle"
             value="open-menu"
             className=".navbar-light .navbar-toggler-icon"
           />
