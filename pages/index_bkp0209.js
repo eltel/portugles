@@ -16,8 +16,7 @@ class Index extends React.Component {
 
     this.state = {
       isFlipping: false,
-      isLoading: true,
-      isEnglish: true
+      isLoading: true
     };
 
     this.roles = [
@@ -29,18 +28,6 @@ class Index extends React.Component {
       "Text Revision",
       "Level testing"
     ];
-
-    this.roles_p = [
-      "Aulas de inglês...",
-      "... pessoalmente (privado) ...",
-      "... ou online",
-      "TOEFL / IELTS",
-      "Tradução do texto",
-      "Revisão de texto",
-      "Teste de nível"
-    ];
-
-    this.toggleLanguage = this.toggleLanguage.bind(this);
   }
 
   componentDidMount() {
@@ -62,12 +49,8 @@ class Index extends React.Component {
     }, 5000);
   }
 
-  toggleLanguage() {
-    this.setState(prevState => ({ isEnglish: !prevState.isEnglish }));
-  }
-
   render() {
-    const { isFlipping, isEnglish } = this.state;
+    const { isFlipping } = this.state;
     const { isAuthenticated, user } = this.props.auth;
     return this.state.isLoading ? (
       <div>Loading...</div>
@@ -85,50 +68,37 @@ class Index extends React.Component {
           <Container>
             <Row>
               <Col md="6">
-                <div className="switchLanguge-container">
-                  {isEnglish && (
-                    <Button
-                      color="success"
-                      style={{ minWidth: "10em" }}
-                      onClick={this.toggleLanguage}
-                    >
-                      Portuguese
-                    </Button>
-                  )}
-                  {!isEnglish && (
-                    <Button
-                      color="danger"
-                      style={{ minWidth: "10em" }}
-                      onClick={this.toggleLanguage}
-                    >
-                      English
-                    </Button>
-                  )}
-                </div>
                 <div className="hero-section">
                   <div className={`flipper ${isFlipping ? "isFlipping" : ""}`}>
                     <div className="front">
                       <div className="hero-section-content">
-                        {isEnglish && <h2> English School & More</h2>}
-                        {!isEnglish && <h2> Escola de inglês e muito mais</h2>}
+                        <h2>
+                          {""}
+                          English School & More
+                        </h2>
                         <div className="hero-section-content-intro">
-                          {isEnglish && (
-                            <h3>
-                              Sign up,
-                              <br /> test yourself
-                              <br /> & learn English!
-                            </h3>
-                          )}
-                          {!isEnglish && (
-                            <h3>
-                              Assinar,
-                              <br /> teste você mesmo
-                              <br /> e aprenda inglês!
-                            </h3>
-                          )}
+                          <h3>
+                            Sign in,
+                            <br /> test yourself
+                            <br /> & learn English!.
+                          </h3>
                         </div>
                       </div>
 
+                      {/*<CloudinaryContext
+                        cloudName="setstate"
+                        fetchFormat="auto"
+                      >
+                        <div className="image-holder">
+                          <Image
+                            publicId="jihgp26s1q2y7pd0hbxl.jpg"
+                            className="cld-img"
+                            alt="Brazilian Flag"
+                            responsive
+                            secure
+                          />
+                        </div>
+                      </CloudinaryContext>*/}
                       <div className="image-holder">
                         <Image
                           cloudName="setstate"
@@ -143,6 +113,11 @@ class Index extends React.Component {
                           <Transformation quality="auto:eco" />
                         </Image>
                       </div>
+                      {/*<img
+                        className="image"
+                        alt="Hacker coding"
+                        src="https://res.cloudinary.com/setstate/image/upload/v1562357091/jihgp26s1q2y7pd0hbxl.jpg"
+                      />*/}
 
                       <div className="shadow-custom">
                         <div className="shadow-inner"> </div>
@@ -150,25 +125,13 @@ class Index extends React.Component {
                     </div>
                     <div className="back">
                       <div className="hero-section-content">
-                        {isEnglish && (
-                          <h2>
-                            Learn from <br />
-                            *native* <br />
-                            English teachers
-                          </h2>
-                        )}
-                        {!isEnglish && (
-                          <h2>
-                            Aprenda com <br />
-                            professores *nativos*
-                            <br />
-                            de inglês
-                          </h2>
-                        )}
-
+                        <h2>
+                          Learn from <br />
+                          *native* <br />
+                          English teachers
+                        </h2>
                         <div className="hero-section-content-intro">
-                          {isEnglish && <h4>*Great Britain</h4>}
-                          {!isEnglish && <h4>*Grã Bretanha</h4>}
+                          <h4>*Great Britain</h4>
                         </div>
                       </div>
                       <div className="image-holder">
@@ -185,6 +148,27 @@ class Index extends React.Component {
                           <Transformation quality="auto:eco" />
                         </Image>
                       </div>
+                      {/*<CloudinaryContext
+                        cloudName="setstate"
+                        fetchFormat="auto"
+                      >
+                        <div className="image-holder">
+                          <Image
+                            publicId="yxwdn7xxrox0ws0zwdjh.jpg"
+                            className="cld-img"
+                            alt="British Flag"
+                            responsive
+                            secure
+                          />
+                        </div>
+                      </CloudinaryContext>*/}
+
+                      {/*<img
+                          className="image"
+                          alt="negative version of Hacker coding"
+                          src="https://res.cloudinary.com/setstate/image/upload/v1562357090/yxwdn7xxrox0ws0zwdjh.jpg"
+                        />*/}
+
                       <div className="shadow-custom shadow-custom-2">
                         <div className="shadow-inner"> </div>
                       </div>
@@ -193,37 +177,19 @@ class Index extends React.Component {
                 </div>
               </Col>
               <Col md="6" className="hero-welcome-wrapper">
-                {isEnglish && (
-                  <Typed
-                    loop
-                    typeSpeed={120}
-                    backSpeed={40}
-                    strings={this.roles}
-                    smartBackspace
-                    shuffle={false}
-                    backDelay={25}
-                    className="self-typed"
-                    loopCount={0}
-                    showCursor
-                    cursorChar="."
-                  />
-                )}
-                {!isEnglish && (
-                  <Typed
-                    loop
-                    typeSpeed={120}
-                    backSpeed={40}
-                    strings={this.roles_p}
-                    smartBackspace
-                    shuffle={false}
-                    backDelay={25}
-                    className="self-typed"
-                    loopCount={0}
-                    showCursor
-                    cursorChar="."
-                  />
-                )}
-
+                <Typed
+                  loop
+                  typeSpeed={120}
+                  backSpeed={40}
+                  strings={this.roles}
+                  smartBackspace
+                  shuffle={false}
+                  backDelay={25}
+                  className="self-typed"
+                  loopCount={0}
+                  showCursor
+                  cursorChar="."
+                />
                 <div className="hero-welcome-text">
                   <h1>
                     {isAuthenticated && (
@@ -231,40 +197,19 @@ class Index extends React.Component {
                         <b>{user.name}</b>{" "}
                       </span>
                     )}
-                    {isEnglish && (
-                      <p>
-                        Welcome to Portuglês.com, check out our services and
-                        products, sign up, log in and test your level. All of
-                        your material in one place, acccessible from anywhere,
-                        monitored by professional, native teachers of English as
-                        a second language.
-                      </p>
-                    )}
-                    {!isEnglish && (
-                      <p>
-                        Bem-vindo ao Portuglês.com, consulte nossos serviços e
-                        produtos, cadastre-se, faça login e teste seu nível.
-                        Todo o seu material em um só lugar, acessível de
-                        qualquer lugar, monitorado por professores nativos
-                        profissionais de inglês como segunda língua.
-                      </p>
-                    )}
+                    Welcome to Portuglês.com, check out our services and
+                    products, sign up, log in and test your level. All of your
+                    material in one place, acccessible from anywhere, monitored
+                    by professional, native teachers of English as a second
+                    language.
                   </h1>
                 </div>
 
                 <div className="hero-welcome-bio">
-                  {isEnglish && (
-                    <h1>
-                      Click the 'About' tab for more info on who we are and what
-                      we do
-                    </h1>
-                  )}
-                  {!isEnglish && (
-                    <h1>
-                      Clique na guia "About" para obter mais informações sobre
-                      quem somos e o que fazemos
-                    </h1>
-                  )}
+                  <h1>
+                    Click the 'About' tab for more info on who we are and what
+                    we do
+                  </h1>
                 </div>
               </Col>
             </Row>

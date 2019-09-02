@@ -29,6 +29,12 @@ body {
   max-width: 90%;
 }
 
+.switchLanguge-container {
+  position: relative;
+  margin: 1em;
+  text-align: center;
+}
+
 @media (max-width: 991px) {
   body {
     padding: 0.5rem;
@@ -41,6 +47,9 @@ body {
   }
   .main-section {
     padding: 60px 0 0;
+  }
+  .base-page {
+    padding: 20px 0 100px 0;
   }
 }
 
@@ -99,6 +108,11 @@ body {
       display: inline-block;
       margin-bottom: 20px;
     }
+  }
+}
+@media (max-width: 769px) {
+  .base-page {
+    padding: 20px 0 0 0;
   }
 }
 
