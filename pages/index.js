@@ -277,10 +277,12 @@ class Index extends React.Component {
             </Row>
           </Container>
         </div>
-        <span className="service-link">
-          Web Application by:{" "}
-          <a href="https://www.vecteezy.com">www.setstate.com</a>
-        </span>
+        <div className="service-link-container">
+          <span className="service-link">
+            Web Application by:{" "}
+            <a href="https://setstate.co">www.setstate.co</a>
+          </span>
+        </div>
       </BaseLayout>
     );
   }
