@@ -32,10 +32,10 @@ class Index extends React.Component {
 
     this.roles_p = [
       "Aulas de inglês...",
-      "... pessoalmente (privado) ...",
+      "... pessoais (privado) ...",
       "... ou online",
-      "TOEFL / IELTS",
-      "Tradução do texto",
+      "TOEFL/IELTS",
+      "Tradução de texto",
       "Revisão de texto",
       "Teste de nível"
     ];
@@ -246,7 +246,7 @@ class Index extends React.Component {
                         produtos, cadastre-se, faça login e teste seu nível.
                         Todo o seu material em um só lugar, acessível de
                         qualquer lugar, monitorado por professores nativos
-                        profissionais de inglês como segunda língua.
+                        profissionais de Inglês como segunda língua.
                       </p>
                     )}
                   </h1>
@@ -262,7 +262,7 @@ class Index extends React.Component {
                   {!isEnglish && (
                     <h1>
                       Clique na guia "About" para obter mais informações sobre
-                      quem somos e o que fazemos
+                      quem somos e o que fazemos.
                     </h1>
                   )}
                 </div>
