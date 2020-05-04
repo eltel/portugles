@@ -38,12 +38,12 @@ class About extends React.Component {
                     style={{ minWidth: "10em" }}
                     onClick={this.toggleLanguage}
                   >
-                    Portuguese
+                    Português
                   </Button>
                 )}
                 {!isEnglish && (
                   <Button
-                    color="danger"
+                    color="secondary"
                     style={{ minWidth: "10em" }}
                     onClick={this.toggleLanguage}
                   >

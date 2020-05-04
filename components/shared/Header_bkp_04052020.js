@@ -35,18 +35,10 @@ const BootstrapNavLink = props => {
   );
 };
 
-const Register = () => {
-  return (
-    <span onClick={auth0.login} className="nav-link port-navbar-link clickable">
-      Register
-    </span>
-  );
-};
-
 const Login = () => {
   return (
     <span onClick={auth0.login} className="nav-link port-navbar-link clickable">
-      Login
+      Login/Register
     </span>
   );
 };
@@ -240,14 +232,10 @@ export default class Header extends React.Component {
                   </NavItem>
                 )}*/}
 
-              {/*  <NavItem className="port-navbar-item">
-                  <BootstrapNavLink route="/signin" title="signin" />
-                </NavItem>*/ !isAuthenticated && (
-                <>
-                  <NavItem className="port-navbar-item">
-                    <BootstrapNavLink route="/signup" title="signup" />
-                  </NavItem>
-                </>
+              {!isAuthenticated && (
+                <NavItem className="port-navbar-item">
+                  <Login />
+                </NavItem>
               )}
 
               {isAuthenticated && (

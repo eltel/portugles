@@ -42,6 +42,7 @@ class Portfolios extends React.Component {
   }
 
   renderPortfolios(portfolios) {
+    debugger;
     const { isAuthenticated, isSiteOwner, user } = this.props.auth;
 
     return portfolios.map((portfolio, index) => {
@@ -69,7 +70,6 @@ class Portfolios extends React.Component {
               </React.Fragment>
             )}{" "}
           </PortfolioCard>
-          ;
         </Col>
       );
     });

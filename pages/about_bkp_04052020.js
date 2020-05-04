@@ -53,16 +53,14 @@ class About extends React.Component {
               </div>
               <div className="left-side" style={{ width: "300px" }}>
                 {isEnglish && <h1 className="title fadein">Hi, Welcome</h1>}{" "}
-                {!isEnglish && <h1 className="title fadein">Oi, bem vindo</h1>}
+                {!isEnglish && <h1 className="title fadein">Oi! Bem-vindo</h1>}
                 {isEnglish && (
                   <h4 className="subtitle fadein">
                     To the Portugles.com About Page
                   </h4>
                 )}
                 {!isEnglish && (
-                  <h4 className="subtitle fadein">
-                    Para a página Sobre do Portugles.com
-                  </h4>
+                  <h4 className="subtitle fadein">à página Portuglês.com</h4>
                 )}
                 {isEnglish && (
                   <p className="subsubTitle fadein">
@@ -71,14 +69,14 @@ class About extends React.Component {
                 )}
                 {!isEnglish && (
                   <p className="subsubTitle fadein">
-                    Aqui está uma breve descrição de quem somos e o que fazemos
-                    ...
+                    Aqui está uma breve descrição de quem somos e o que
+                    fazemos...
                   </p>
                 )}
               </div>
             </Col>
             <Col md="6">
-              <div className="fadein">
+              <div className="subsubTitle fadein">
                 {isEnglish && (
                   <>
                     <p>
@@ -106,24 +104,24 @@ class About extends React.Component {
                 {!isEnglish && (
                   <>
                     <p>
-                      Especialistas em estudos personalizados da língua inglesa
+                      Especialistas em estudos personalizados da língua Inglesa
                       para Brasileiros.{" "}
                     </p>
                     <p>
                       As aulas estão disponíveis pessoalmente e on-line via
-                      Skype e são adaptados às necessidades de cada aluno.
-                      Privado, aulas presenciais só estão disponíveis na escola
-                      em Sorocaba no momento - as aulas do Skype estão
-                      disponíveis em todo o Brasil, dependendo da qualidade da
-                      conexão de internet do aluno.
+                      Skype e são adaptadas às necessidades de cada aluno. Aulas
+                      particulares presenciais só estão disponíveis na escola em
+                      Sorocaba no momento - as aulas de Skype estão disponíveis
+                      em todo o Brasil, dependendo da qualidade da conexão de
+                      internet do aluno.
                     </p>
                     <p>
-                      Coordenado por um professor de inglês nativo de Londres,
+                      Coordenado por um professor de Inglês nativo de Londres,
                       com mais de 13 anos anos de experiência em atender os
-                      requisitos específicos de Estudantes brasileiros de inglês
-                      como segunda língua, de todo níveis. Traduções de textos
-                      em português para inglês revisão de texto / revisão em
-                      serviços em inglês também são acessível.
+                      requisitos específicos de Estudantes Brasileiros de Inglês
+                      como segunda língua, de todos os níveis. Traduções de
+                      textos de Português para Inglês e revisão de textos em
+                      Inglês também estão disponíveis.
                     </p>
                   </>
                 )}

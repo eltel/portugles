@@ -1,6 +1,6 @@
 import React from "react";
 import Typed from "react-typed";
-import { Button, Container, Row, Col, Spinner } from "reactstrap";
+import { Button, Container, Row, Col } from "reactstrap";
 import {
   Image,
   Video,
@@ -69,11 +69,10 @@ class Index extends React.Component {
   render() {
     const { isFlipping, isEnglish } = this.state;
     const { isAuthenticated, user } = this.props.auth;
+    console.log(user);
+
     return this.state.isLoading ? (
-      <div>
-        Loading...
-        <Spinner color="dark" />
-      </div>
+      <div>Loading...</div>
     ) : (
       <BaseLayout
         {...this.props.auth}
@@ -95,12 +94,12 @@ class Index extends React.Component {
                       style={{ minWidth: "10em" }}
                       onClick={this.toggleLanguage}
                     >
-                      Português
+                      Portuguese
                     </Button>
                   )}
                   {!isEnglish && (
                     <Button
-                      color="secondary"
+                      color="danger"
                       style={{ minWidth: "10em" }}
                       onClick={this.toggleLanguage}
                     >
@@ -231,7 +230,7 @@ class Index extends React.Component {
                   <h1>
                     {isAuthenticated && (
                       <span>
-                        <b>{user.name}</b>{" "}
+                        <b>{user.name}</b>
                       </span>
                     )}
                     {isEnglish && (
