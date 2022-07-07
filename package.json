@@ -33,7 +33,7 @@
     "js-cookie": "^2.2.0",
     "jsonwebtoken": "^8.5.1",
     "jwks-rsa": "^1.4.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "mongoose": "^5.7.5",
     "next": "^8.1.0",
     "next-offline": "^4.0.2",
