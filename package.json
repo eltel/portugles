@@ -25,7 +25,7 @@
     "compression": "^1.7.4",
     "cross-env": "^5.2.0",
     "emotion": "9.2.12",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-jwt": "^5.3.1",
     "fontfaceobserver": "^2.1.0",
     "formik": "^1.5.4",
